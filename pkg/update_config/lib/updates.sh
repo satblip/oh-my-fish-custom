@@ -2,15 +2,15 @@ echo "------------------------------"
 echo " Starting update config files"
 echo "------------------------------"
 echo "Updating Fish"
-cd ~/.config/fish/
+cd $CUSTOM_OMF_CONFIG_PATH
 git pull
 
 echo "Updating Iterm2"
-cd ~/Github/iterm_config/
+cd $CUSTOM_ITERM_CONFIG_PATH
 git pull
 
 echo "Updating Sublime Text"
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+cd $CUSTOM_SUBLIME_CONFIG_PATH
 git pull
 echo "----------------------------"
 echo "        Update Over"

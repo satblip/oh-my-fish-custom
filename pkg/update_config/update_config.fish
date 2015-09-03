@@ -1,18 +1,11 @@
-# SYNOPSIS
-#   update_config [options]
-#
-# USAGE
-#   Options
-#
-
-function init -a path --on-event init_update_config
-
+# ----------------------
+#     Update Script
+# ----------------------
+function update_config
+  sh $fish_custom/plugins/update_config/updates.sh
 end
 
-function update_config -d "My package"
-
-end
-
-function uninstall --on-event uninstall_update_config
-
-end
+# Configure the paths below
+set -x CUSTOM_OMF_CONFIG_PATH $fish_custom
+set -x CUSTOM_ITERM_CONFIG_PATH ~/Github/iterm_config/
+set -x CUSTOM_SUBLIME_CONFIG_PATH ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
