@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var exec = require('child_process').exec;
+
+function escapeHtml(unsafe) {
+  return unsafe
+       .replace(/&amp;/g, '&')
+       .replace(/&lt;/g, '<')
+       .replace(/&gt;/g, '>')
+       .replace(/&quot;/g, '"')
+       .replace(/&#039;/g, "'");
+}
+
+var curlCmd = 'curl -sb -H "Accept: application/json" "http://api.icndb.com/jokes/random?firstName=Louis&lastName=Borsu"';
+
+
+
+exec(curlCmd,{ timeout: 2500 }, function(stdErr,stdOut){
+  if (!stdErr) {
+    var jokeData = JSON.parse(stdOut);
+    console.log(escapeHtml(jokeData.value.joke));
+  } else {
+    console.log(escapeHtml('Louis Borsu gots internet even without internet'));
+  }
+
+});
