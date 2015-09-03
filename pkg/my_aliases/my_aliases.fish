@@ -99,19 +99,70 @@ function gcm
   git commit -m $argv
 end
 
-#alias gco='git checkout'
-#alias gcob='git checkout -b'
-#alias gcom='git checkout master'
-#alias gd='git diff'
-#alias gda='git diff HEAD'
-#alias gi='git init'
-#alias gl='git log'
-#alias glg='git log --graph --oneline --decorate --all'
-#alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
-#alias gm='git merge --no-ff'
-#alias gp='git pull'
-#alias gss='git status -s'
-#alias gst='git stash'
-#alias gstl='git stash list'
-#alias gstp='git stash pop'
-#alias gstd='git stash drop'
+function gco
+  git checkout $argv
+end
+
+function gcob
+  git checkout -b $argv
+end
+
+function gcom
+  git checkout master
+end
+
+function gd
+  git diff $argv
+end
+
+function gda
+  git diff HEAD
+end
+
+function gi
+  git init
+end
+
+function gl
+  git log
+end
+
+function glg
+  git log --graph --oneline --decorate --all
+end
+
+function gld
+  git log --pretty=format:"%h %ad %s" --date=short --all
+end
+
+function gld
+  git log --pretty=format:"%h %ad %s" --date=short --all
+end
+
+function gm
+  git merge --no-ff
+end
+
+function gp
+  git pull
+end
+
+function gss
+  git status -s
+end
+
+function gst
+  git stash
+end
+
+function gst
+  git stash list
+end
+
+function gstp
+  git stash pop
+end
+
+function gstd
+  git stash drop
+end
