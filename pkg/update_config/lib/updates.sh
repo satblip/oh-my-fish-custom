@@ -10,7 +10,7 @@ cd $CUSTOM_ITERM_CONFIG_PATH
 git pull
 
 echo "Updating Sublime Text"
-cd $CUSTOM_SUBLIME_CONFIG_PATH
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 git pull
 echo "----------------------------"
 echo "        Update Over"
