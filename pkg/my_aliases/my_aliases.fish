@@ -24,6 +24,11 @@ function dmac
   docker-machine $argv
 end
 
+# Rebuild docker image
+function docRebuild
+  docker-compose stop $argv; and docker-compose rm -v $argv; and docker-compose build $argv;
+end
+
 # Flush DNS (Yosemite)
 function flush
   killall -HUP mDNSResponder

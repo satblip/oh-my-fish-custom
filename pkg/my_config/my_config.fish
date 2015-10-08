@@ -1,5 +1,5 @@
 # Java
-set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 # MongoDB
 set -x MONGODBURL localhost
@@ -9,7 +9,7 @@ set PATH /Applications/Postgres.app/Contents/Versions/9.4/bin $PATH
 
 # Docker
 set -x DOCKER_TLS_VERIFY "1";
-set -x DOCKER_HOST "tcp://10.211.55.3:2376";
+set -x DOCKER_HOST "tcp://192.168.99.100:2376";
 set -x DOCKER_CERT_PATH "/Users/louisborsu/.docker/machine/machines/dev";
 set -x DOCKER_MACHINE_NAME "dev";
 
