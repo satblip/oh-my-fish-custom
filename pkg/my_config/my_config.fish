@@ -16,8 +16,15 @@ set -x DOCKER_MACHINE_NAME "dev";
 # Node Env
 set -x NODE_ENV development
 
-# Brew path
+# Default Path
 set default_path /usr/bin /usr/sbin /bin /sbin
+
+# Brew path
 set homebrew /usr/local/bin /usr/local/sbin
 set brew_rbenv "/usr/local/var/rbenv/shims"
-set -gx PATH $homebrew $brew_rbenv $default_path
+
+# NodeJS Global
+set node_path ~/npm-global/bin
+
+# Set All Paths
+set -gx PATH $homebrew $brew_rbenv $default_path $node_path

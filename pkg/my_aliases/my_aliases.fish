@@ -67,13 +67,6 @@ function update_config
 end
 
 # ----------------------
-# Git Outside of Xcode
-# ----------------------
-function git
-  /usr/local/git/bin/git $argv
-end
-
-# ----------------------
 # Git Aliases
 # ----------------------
 function ga
