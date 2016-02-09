@@ -1,3 +1,5 @@
+# DEPRECATED due to oh-my-fish (DMCA takedown)[https://github.com/github/dmca/blob/master/2016-02-04-Wahoo-2.md]
+
 # Satblip's Custom Fish configuration
 
 - nodeJs required!
